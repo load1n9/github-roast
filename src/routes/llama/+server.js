@@ -158,7 +158,7 @@ export async function POST({ request }) {
 		const completion = await generateText({
 			model: groq("llama-3.1-70b-versatile"),
 			system:
-				"You roast people github account based on their bio, name, readme, and repos as harsh and spicy as possible, and keep it short.",
+				"You roast people github account based on their bio, name, organizations, readme, and repos as harsh and spicy as possible, but still in a fun way.",
 			prompt,
 			maxTokens: 1024,
 			temperature: 0.7,
@@ -174,10 +174,3 @@ export async function POST({ request }) {
 		return json({ error: "Failed to generate roast" }, { status: 500 });
 	}
 }
-
-// async function sha256(str) {
-// 	// Get the string as arraybuffer.
-// 	const buffer = new TextEncoder("utf-8").encode(str);
-// 	const hash = await crypto.subtle.digest("SHA-256", buffer);
-// 	return hex(hash);
-// }
