@@ -55,7 +55,7 @@
 	<title>GitHub Profile Roast 🔥🔥🔥</title>
 </svelte:head>
 
-<div class="container mx-auto p-4 max-w-md">
+<div class="container mx-auto p-4 max-w-md dark:bg-black">
 	<h1 class="text-3xl font-bold mb-4 text-center text-purple-600">GitHub Roaster</h1>
 
 	<div class="mb-4">
@@ -89,15 +89,15 @@
 	</button>
 
 	{#if roast && mounted}
-		<div class="mt-6 relative bg-gray-100 p-4 rounded-lg" transition:fade={{ duration: 300 }}>
+		<div class="mt-6 relative light:bg-gray-100 dark:bg-gray-900 p-4 rounded-lg" transition:fade={{ duration: 300 }}>
 			<div
 				class="absolute top-0 left-4 -mt-2 w-0 h-0 border-8 border-transparent border-b-gray-100"
 			></div>
-			<p class="text-gray-800"><SvelteMarkdown source={roast} /></p>
+			<p class="text-gray-800 dark:text-white"><SvelteMarkdown source={roast} /></p>
 		</div>
 	{/if}
 
-	<div class="mt-8 text-center text-sm text-gray-500">
+	<div class="mt-8 text-center text-sm light:text-gray-500 dark:text-white">
 		<p>&copy; 2024 github-roast.pages.dev</p>
 		<p>
 			Poke <a class="text-blue-500" target="_blank" href="https://x.com/rubi1945">Admin</a> if something

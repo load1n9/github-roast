@@ -28,6 +28,8 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@ai-sdk/openai": "^0.0.40",
+		"ai": "^3.3.0",
 		"openai": "^4.54.0",
 		"svelte-markdown": "^0.4.1"
 	}
