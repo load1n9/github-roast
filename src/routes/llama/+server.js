@@ -1,11 +1,11 @@
-import { GROQ_API_KEY } from "$env/static/private";
+// import { GROQ_API_KEY } from "$env/static/private";
 import { createOpenAI as createGroq } from "@ai-sdk/openai";
 import { generateText } from "ai";
 import { json } from "@sveltejs/kit";
 
 const groq = createGroq({
 	baseURL: "https://api.groq.com/openai/v1",
-	apiKey: GROQ_API_KEY,
+	apiKey: process.env.GROQ_API_KEY,
 });
 
 const headers = {
