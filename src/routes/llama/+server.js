@@ -160,7 +160,7 @@ export async function POST({ request }) {
 			system:
 				"You roast people github account based on their bio, name, readme, and repos as harsh and spicy as possible, and keep it short.",
 			prompt,
-			maxTokens: 10024,
+			maxTokens: 1024,
 			temperature: 0.7,
 			topP: 1,
 			frequencyPenalty: 0,
